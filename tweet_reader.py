@@ -18,11 +18,13 @@ import json
 
 # In[ ]:
 
+with open('secret.txt') as json_file:
+	data = json.load(json_file)
 
-cosumer_key = '6a6O3uc45EsVQizvpOe9vLb7n'
-consumer_secret = 'IuF1iTrZWA23223yB4Dynfjh4ZG0tM9zUGl5iopyohbO10J2JL'
-access_token = '872997408808075265-gRbrN9id9ddhcTN3NiAag6UNtHBHaTF'
-access_secret= '3hGwXw7UN0yf43qE1bV2qn7f4eYKuic4fedlm8sKtgZUi'
+cosumer_key = data['info'][0]['api_key']
+consumer_secret = data['info'][0]['api_secret']
+access_token = data['info'][0]['access_token']
+access_secret= data['info'][0]['access_secret']
 
 
 # In[ ]:
